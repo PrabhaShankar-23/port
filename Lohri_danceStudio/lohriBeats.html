@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lohri Beats</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../img/faviconP.png" type="image/X-icon" />
+  </head>
+  <body>
+    <div class="keys">
+      <div class="key" data-key="65">
+        <kbd>A</kbd>
+        <span class="sound">Bhangra</span>
+      </div>
+      <div class="key" data-key="83">
+        <kbd>S</kbd>
+        <span class="sound">Bhangra2</span>
+      </div>
+      <div class="key" data-key="68">
+        <kbd>D</kbd>
+        <span class="sound">Dholak1</span>
+      </div>
+      <div class="key" data-key="70">
+        <kbd>F</kbd>
+        <span class="sound">DholakMarathi</span>
+      </div>
+      <div class="key" data-key="71">
+        <kbd>G</kbd>
+        <span class="sound">Dholakrise</span>
+      </div>
+      <div class="key" data-key="72">
+        <kbd>H</kbd>
+        <span class="sound">gun</span>
+      </div>
+      <div class="key" data-key="74">
+        <kbd>J</kbd>
+        <span class="sound">snareroll</span>
+      </div>
+      <div class="key" data-key="75">
+        <kbd>K</kbd>
+        <span class="sound">Tabla</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="./sounds/Bhangra.wav"></audio>
+    <audio data-key="83" src="./sounds/Bhangra2.wav"></audio>
+    <audio data-key="68" src="./sounds/Dholak1.wav"></audio>
+    <audio data-key="70" src="./sounds/DholakMarathi.wav"></audio>
+    <audio data-key="71" src="./sounds/Dholakrise.wav"></audio>
+    <audio data-key="72" src="./sounds/gun.wav"></audio>
+    <audio data-key="74" src="./sounds/snareroll.wav"></audio>
+    <audio data-key="75" src="./sounds/Tabla.wav"></audio>
+
+    <script>
+      function removeTransition(e) {
+        if (e.propertyName !== "transform") return;
+        e.target.classList.remove("playing");
+      }
+
+      function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+
+        key.classList.add("playing");
+        audio.currentTime = 0;
+        audio.play();
+      }
+
+      const keys = Array.from(document.querySelectorAll(".key"));
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+      window.addEventListener("keydown", playSound);
+    </script>
+  </body>
+</html>

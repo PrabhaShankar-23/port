@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- This solves out responsives in the website. So, it is very necessary to insert this 
+     width = divice-width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- Normalize just lets normalize between different browsers for the minor differences that exist in the 
+    browser for the minor differences that exist in it. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Dev Prabha Shanker</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Updation of fontsize -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kanit&family=Source+Serif+4:wght@200&display=swap"
+    />
+
+    <link rel="icon" type="image/x-icon" href="./img/faviconP.png" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./img/psmLogo.png" alt="SuperMan_Returns" />
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="Hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Services</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Here we are going to make intro! -->
+    <section class="intro" id="home">
+      <!-- Here 2 hyphens indicate that this is going to be modified latter onwards -->
+      <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Prabha Shanker</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">front-end dev</p>
+      <img
+        src="./img/Psm_Rockstar.png"
+        alt="smiling Psm_Rockstar"
+        class="intro__img"
+      />
+    </section>
+
+    <!-- Services -->
+
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Finance Projects</h3>
+          <p>
+            Preparing responsive design so that my layouts work on all devices.
+            Fast load times and lag free interation for users is my first
+            priority.
+          </p>
+        </div>
+        <div class="service">
+          <h3>E-Commerce</h3>
+          <p>
+            I give strong preference for easy to use intuitive UI/UX. Websites
+            don't have to be static I love making pages come to life.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Fashion Brands</h3>
+          <p>
+            My approach to website design for fashion brands is to create a
+            website that strengthens your company’s brand while ensuring ease of
+            use and simplicity for your audience.
+          </p>
+        </div>
+      </div>
+      <a href="#projects" class="btn">Projects</a>
+    </section>
+
+    <!-- About me  -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Frontend Developer based out of Gurugram
+      </p>
+      <div class="about-me__body">
+        <p>
+          I am a front-end web Developer based out of 'Gurugram', India. I have
+          serious passion for UI effects, animations and creating intuitive,
+          dynamic user experiences.
+        </p>
+        <p>
+          I'm quietly confident, naturally curious, and perpetually working on
+          improving my chops one design problem at a time. I have worked
+          previously in analytics domain. Having fair advantage in leveraging my
+          data science skills to perform better in web devlopment profile.
+        </p>
+      </div>
+      <img src="./img/psm_about.png" alt="hero smiles" class="about-me__img" />
+    </section>
+
+    <!-- Projects section -->
+
+    <section class="my-work" id="projects">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__subtitle--projects">Awesome projects collection!</p>
+      <div class="portfolio">
+        <!-- Portfolio item no 1 -->
+        <a
+          href="./COFFEE POINT/coffeeAddict.html"
+          target="_blank"
+          class="porfolio__item"
+        >
+          <img src="./img/10.png" alt="yoo image" class="portfolio__img" />
+        </a>
+        <a
+          href="./Lohri_danceStudio/lohriBeats.html"
+          class="porfolio__item"
+          target="_blank"
+        >
+          <img src="./img/20.png" alt="yoo image" class="portfolio__img" />
+        </a>
+        <a
+          href="./BlackJack Casino/BlackJack.html"
+          target="_blank"
+          class="porfolio__item"
+        >
+          <img src="./img/30.png" alt="yoo image" class="portfolio__img" />
+        </a>
+        <a
+          href="./Peoplecounter/peoplecounter.html"
+          class="porfolio__item"
+          target="_blank"
+        >
+          <img src="./img/40.png" alt="yoo image" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+
+    <footer class="footer">
+      <a href="mailto:psm.nitS@gmail.com" class="footer__link"
+        >psm.nits@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://github.com/PrabhaShankar-23"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://twitter.com/prabhashankarmi"
+            target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.google.co.in/webhp?authuser=1"
+            target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.google.co.in/webhp?authuser=1"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
