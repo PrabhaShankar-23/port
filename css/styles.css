@@ -252,6 +252,7 @@ Note: Here the function is changing 2 class propeties with one call through one 
 
 .intro {
   position: relative;
+  
 }
 .intro__img {
   box-shadow: var(--bs);
@@ -272,6 +273,7 @@ Note: Here the function is changing 2 class propeties with one call through one 
       "img .";
     grid-template-columns: min-content max-content;
     gap: 10px;
+    
   }
 
   .intro__img {
